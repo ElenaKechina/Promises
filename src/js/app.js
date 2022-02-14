@@ -1,13 +1,12 @@
-import read from './reader';
-import json from './parser';
-import GameSaving from './GameSaving';
+import GameSavingLoader from './GameSavingLoader';
 
-class GameSavingLoader {
-  static load() {
-    return read()
-      .then((data) => json(data))
-      .then((data) => new GameSaving(JSON.parse(data)));
-  }
-}
-
-export default GameSavingLoader;
+GameSavingLoader.load().then(
+  (saving) => {
+    console.log(saving);
+    // saving объект класса GameSaving
+  },
+  (error) => {
+    console.log(error);
+    // ...
+  },
+);

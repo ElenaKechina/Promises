@@ -1,4 +1,4 @@
-import GameSavingLoader from '../app';
+import GameSavingLoader from '../GameSavingLoader';
 import GameSaving from '../GameSaving';
 
 describe('Class GameSavingLoader:', () => {
